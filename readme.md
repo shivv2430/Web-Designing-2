@@ -1,1 +1,2 @@
-Javascript and React 
+web-Designing workshop 
+JavaScript and React
