@@ -1,2 +1,2 @@
-web-Designing workshop 
+Web-Designing workshop using
 JavaScript and React
