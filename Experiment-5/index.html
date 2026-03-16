@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Employee Salary Management System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  
+
+<div class="container">
+    
+  
+
+<h2>Employee Salary Management System</h2>
+
+<input type="text" id="name" placeholder="Employee Name">
+<input type="number" id="id" placeholder="Employee ID">
+<input type="number" id="salary" placeholder="Salary">
+<input type="text" id="department" placeholder="Department">
+
+<button onclick="addEmployee()">Add Employee</button>
+
+<div class="buttons">
+<button onclick="displayEmployees()">Display All</button>
+<button onclick="filterSalary()">Salary > 50000</button>
+<button onclick="totalSalary()">Total Salary</button>
+<button onclick="averageSalary()">Average Salary</button>
+<button onclick="countDepartment()">Count by Department</button>
+</div>
+ 
+<div id="output"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
