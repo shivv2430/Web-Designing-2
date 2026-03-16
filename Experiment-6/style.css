@@ -1,0 +1,61 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Center the container on the page */
+body{
+    background:#537D96;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Container box */
+.container{
+    background:#EEEEEE;
+    padding:30px;
+    width:600px;
+    text-align:center;
+    border-radius:8px;
+    box-shadow:0px 4px 15px rgba(0,0,0,0.3);
+    border: 1px solid black;
+}
+
+/* Heading */
+h2{
+    margin-bottom:15px;
+}
+
+/* Input */
+input{
+    padding:8px;
+    width:200px;
+    margin:10px 0;
+    border:1px solid #999;
+    border-radius:4px;
+}
+
+/* Buttons */
+button{
+    background:blue;
+    color:white;
+    border:2px solid black;
+    padding:8px 12px;
+    margin:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:darkblue;
+}
+
+/* Paragraph */
+p{
+    margin-top:20px;
+    background:#EEEEEE;
+
+}
