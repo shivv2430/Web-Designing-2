@@ -1,31 +1,31 @@
-body{
+body {
     font-family: Arial;
-    background:#AACDDC;
-    text-align:center;
+    background: #AACDDC;
+    text-align: center;
 }
 
-.container{
-    background:#81A6C6;
-    width:400px;
-    margin:100px auto;
-    padding:20px;
+.container {
+    background: #81A6C6;
+    width: 400px;
+    margin: 100px auto;
+    padding: 20px;
     border-radius: 10px;
-    box-shadow:0 0 10px rgb(68, 89, 121);
+    box-shadow: 0 0 10px rgb(68, 89, 121);
 }
 
-input{
-    padding:6px;
-    margin:10px;
+input {
+    padding: 6px;
+    margin: 10px;
 }
 
-button{
-    padding:8px 15px;
-    background:rgb(0, 0, 167);
-    color:white;
-    border:none;
+button {
+    padding: 8px 15px;
+    background: rgb(0, 0, 167);
+    color: white;
+    border: none;
 }
 
-#result{
-    margin-top:20px;
-    font-weight:bold;
+#result {
+    margin-top: 20px;
+    font-weight: bold;
 }
