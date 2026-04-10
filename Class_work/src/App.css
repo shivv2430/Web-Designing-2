@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #e0e0e0;
+  background-color: #8f8b8b;
 }
 
 .container {
@@ -14,12 +14,13 @@ h1 {
 }
 
 .card {
-  background: #f5f5f5;
+  background: #ed8383;
   padding: 20px;
   margin: 15px auto;
   width: 300px;
   border-radius: 12px;
-  box-shadow: 5px 5px 10px #bcbcbc, -5px -5px 10px #ffffff;
+  border: 2px solid #000000;
+  box-shadow: 5px 5px 10px #bcbcbc;
 }
 
 .card h2 {
