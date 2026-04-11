@@ -1,61 +1,154 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary: #4f46e5;
+    --primary-dark: #3730a3;
+    --accent: #f43f5e;
+    --bg-main: #0f172a;
+    --surface: rgba(255, 255, 255, 0.95);
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+    --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-/* Center the container on the page */
-body{
-    background:#537D96;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* Container box */
-.container{
-    background:#EEEEEE;
-    padding:30px;
-    width:600px;
-    text-align:center;
-    border-radius:8px;
-    box-shadow:0px 4px 15px rgba(0,0,0,0.3);
-    border: 1px solid black;
+body {
+    /* Transitions smoothly when JS changes the background color */
+    transition: background-color 0.5s ease;
+    background-color: #537D96; /* Default */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(79, 70, 229, 0.1) 0, transparent 50%), 
+        radial-gradient(at 50% 0%, rgba(244, 63, 94, 0.1) 0, transparent 50%);
 }
 
-/* Heading */
-h2{
-    margin-bottom:15px;
+.container {
+    background: var(--surface);
+    backdrop-filter: blur(10px);
+    padding: 3rem;
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    animation: slideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Input */
-input{
-    padding:8px;
-    width:200px;
-    margin:10px 0;
-    border:1px solid #999;
-    border-radius:4px;
+h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
 }
 
-/* Buttons */
-button{
-    background:blue;
-    color:white;
-    border:2px solid black;
-    padding:8px 12px;
-    margin:5px;
-    cursor:pointer;
+/* User Input Field */
+input[type="text"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 20px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+    outline: none;
+    text-align: center;
 }
 
-button:hover{
-    background:darkblue;
+input[type="text"]:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
 }
 
-/* Paragraph */
-p{
-    margin-top:20px;
-    background:#EEEEEE;
+/* Button Layout Transformation */
+/* We use flexbox on the container to organize the buttons neatly 
+   even though they are just scattered in the HTML */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+/* We'll wrap our logic around the buttons */
+button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 160px;
+}
+
+button:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Special styling for specific buttons using ID selectors */
+#ResetBtn:hover {
+    color: var(--accent);
+}
+
+
+/* Paragraph Text Styling */
+p {
+    margin-top: 2.5rem;
+    padding: 1.5rem;
+    background: #f8fafc;
+    border-radius: 16px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    font-size: 1rem;
+    border: 1px dashed #cbd5e1;
+    transition: font-size 0.3s ease;
+}
+
+/* Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .container {
+        padding: 2rem 1.5rem;
+    }
+    
+    button {
+        width: 100%;
+        margin: 4px 0;
+    }
 }
