@@ -1,24 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Student Result Calculator</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GradeMaster | Student Result Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div class="background-overlay"></div>
+    
+    <div class="container" id="main-container">
+        <header>
+            <div class="logo">Experiment 4</div>
+            <h1>Student Result Calculator</h1>
+            
+        </header>
 
-<div class="container">
-    <h2>Student Result Calculator</h2>
+        <!-- Step 1: Subjects Configuration -->
+        <div id="step-1" class="step">
+            
+            <div class="input-group">
+                <label for="subjects">Number of Subjects</label>
+                <div class="input-wrapper">
+                    <input type="number" id="subjects" min="1" max="15" placeholder="e.g. 5">
+                </div>
+            </div>
+            <button id="setup-btn" onclick="setupInputs()" class="btn-primary">Enter Marks & Calculate</button>
+        </div>
 
-    <label>Enter Number of Subjects:</label>
-    <input type="number" id="subjects">
+        <!-- Result Section -->
+        <div id="result-section" class="result-card hidden">
+            <div class="result-header">
+                <h3>Performance Report</h3>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="label">Total Marks</span>
+                    <span id="res-total" class="value">-</span>
+                </div>
+                <div class="stat-item">
+                    <span id="res-average" class="value">-</span>
+                    <span class="label">Average (Percentage)</span>
+                </div>
+            </div>
+            <div class="result-footer">
+                <div class="grade-badge" id="res-grade">Grade: -</div>
+                <div class="status-badge" id="res-status">Status: -</div>
+            </div>
+            <button onclick="resetApp()" class="btn-outline">New Calculation</button>
+        </div>
+    </div>
 
-    <button onclick="calculateResult()">Enter Marks & Calculate</button>
-
-    <div id="result"></div>
-</div>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
