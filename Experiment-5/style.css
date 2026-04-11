@@ -1,46 +1,186 @@
-body{
-font-family: Arial;
-background:#C7EABB;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
+/* PREMEMIUM DESIGN SYSTEM FOR EXPERIMENT 5 */
+:root {
+    --primary: #6366f1;
+    --primary-hover: #4f46e5;
+    --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border: #cbd5e1;
+    --radius: 12px;
+    --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
 }
 
-
-.container{
-background:#E8F5BD;
-padding:20px;
-width:400px;
-border-radius:8px;
-box-shadow:0 0 10px gray;
-text-align:center;
-border: 1px solid black;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-input{
-width:90%;
-padding:8px;
-margin:5px;
-
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg-gradient);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-button{
-background:#28a745;
-color:white;
-border:none;
-padding:8px 12px;
-margin:4px;
-cursor:pointer;
-border-radius:5px;
-border: 1px solid rgb(15, 67, 35);
+/* Base Container Upgrade */
+.container {
+    background: var(--card-bg);
+    padding: 40px;
+    width: 100%;
+    max-width: 600px; /* Wider for dashboard feel */
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    border: none !important; /* Overriding basic border */
+    animation: fadeIn 0.6s ease-out;
 }
 
-button:hover{
-background:#218838;
+h2 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 30px;
+    letter-spacing: -0.5px;
 }
 
-#output{
-margin-top:15px;
-text-align:left;
+/* Input Styling */
+input {
+    width: 100% !important;
+    padding: 12px 16px !important;
+    margin: 10px 0 !important;
+    border: 1.5px solid var(--border) !important;
+    border-radius: 8px !important;
+    font-size: 1rem !important;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+/* Button Styling (Main Button) */
+button {
+    background: var(--primary) !important;
+    color: white !important;
+    border: none !important;
+    padding: 14px 24px !important;
+    margin: 20px 0 !important;
+    font-weight: 700 !important;
+    cursor: pointer;
+    border-radius: 8px !important;
+    width: 100%;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background: var(--primary-hover) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Smaller control buttons */
+.buttons button {
+    margin: 0 !important;
+    padding: 10px !important;
+    font-size: 0.85rem !important;
+    background: #f1f5f9 !important;
+    color: var(--text-muted) !important;
+    border: 1px solid var(--border) !important;
+}
+
+.buttons button:hover {
+    background: #e2e8f0 !important;
+    color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+/* Output Area (Dynamic Results) */
+#output {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #f1f5f9;
+    text-align: left;
+    min-height: 100px;
+}
+
+/* --- INJECTED COMPONENT STYLES --- */
+
+/* Modern Data Table */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    animation: slideUp 0.4s ease-out;
+}
+
+.data-table th {
+    text-align: left;
+    padding: 12px;
+    background: #f8fafc;
+    color: var(--text-muted);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.data-table td {
+    padding: 12px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.data-table tr:hover td {
+    background: #fdfdff;
+}
+
+/* High-Impact Stat Card */
+.result-card {
+    background: #f8fafc;
+    border: 2px dashed #e2e8f0;
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    animation: slideUp 0.4s ease-out;
+}
+
+.result-card .label {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.result-card .value {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
