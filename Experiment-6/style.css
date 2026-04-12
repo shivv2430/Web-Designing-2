@@ -2,9 +2,6 @@
 
 :root {
     --primary: #4f46e5;
-    --primary-dark: #3730a3;
-    --accent: #f43f5e;
-    --bg-main: #0f172a;
     --surface: rgba(255, 255, 255, 0.95);
     --text-dark: #1e293b;
     --text-muted: #64748b;
@@ -19,9 +16,7 @@
 }
 
 body {
-    /* Transitions smoothly when JS changes the background color */
-    transition: background-color 0.5s ease;
-    background-color: #537D96; /* Default */
+    background-color: #537D96;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -36,13 +31,14 @@ body {
     background: var(--surface);
     backdrop-filter: blur(10px);
     padding: 3rem;
-    width: 100%;
-    max-width: 650px;
+    width: 650px;
     text-align: center;
     border-radius: 24px;
     box-shadow: var(--shadow);
     border: 1px solid rgba(255, 255, 255, 0.5);
-    animation: slideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h2 {
@@ -54,7 +50,6 @@ h2 {
     line-height: 1.2;
 }
 
-/* User Input Field */
 input[type="text"] {
     width: 100%;
     max-width: 400px;
@@ -63,7 +58,6 @@ input[type="text"] {
     border-radius: 12px;
     font-size: 1rem;
     margin-bottom: 2rem;
-    transition: all 0.3s ease;
     outline: none;
     text-align: center;
 }
@@ -73,16 +67,6 @@ input[type="text"]:focus {
     box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
 }
 
-/* Button Layout Transformation */
-/* We use flexbox on the container to organize the buttons neatly 
-   even though they are just scattered in the HTML */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* We'll wrap our logic around the buttons */
 button {
     background: var(--primary);
     color: white;
@@ -92,7 +76,6 @@ button {
     font-weight: 600;
     border-radius: 10px;
     cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     margin: 5px;
     display: inline-flex;
     align-items: center;
@@ -100,23 +83,6 @@ button {
     min-width: 160px;
 }
 
-button:hover {
-    background: var(--primary-dark);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
-}
-
-button:active {
-    transform: translateY(0);
-}
-
-/* Special styling for specific buttons using ID selectors */
-#ResetBtn:hover {
-    color: var(--accent);
-}
-
-
-/* Paragraph Text Styling */
 p {
     margin-top: 2.5rem;
     padding: 1.5rem;
@@ -126,29 +92,4 @@ p {
     line-height: 1.6;
     font-size: 1rem;
     border: 1px dashed #cbd5e1;
-    transition: font-size 0.3s ease;
-}
-
-/* Animation */
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 600px) {
-    .container {
-        padding: 2rem 1.5rem;
-    }
-    
-    button {
-        width: 100%;
-        margin: 4px 0;
-    }
 }

@@ -1,10 +1,3 @@
-/**
- * EXPERIMENT 4: Prompt-based Marks Entry
- * ----------------------------------------------------------------------
- * Objective: Takes number of subjects, uses a LOOP with prompt() to collect marks,
- * uses IF-ELSE for grading, and displays the result card.
- */
-
 function setupInputs() {
     // 1. Get number of subjects from input field
     const numSubjectsInput = document.getElementById("subjects");

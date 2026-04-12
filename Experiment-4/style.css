@@ -1,10 +1,8 @@
 :root {
     --primary: #4052f5;
-    --primary-hover: #3444cc;
     --secondary: #64748b;
     --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     --surface: rgba(255, 255, 255, 0.95);
-    --glass: rgba(255, 255, 255, 0.15);
     --text-main: #1e293b;
     --text-muted: #64748b;
     --success: #10b981;
@@ -47,7 +45,7 @@ body {
     padding: 2.5rem;
     border-radius: 20px;
     box-shadow: var(--shadow);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
     position: relative;
     z-index: 1;
 }
@@ -72,11 +70,6 @@ header h1 {
     margin-bottom: 0.25rem;
 }
 
-
-.step {
-    animation: fadeIn 0.5s ease-out;
-}
-
 .hidden {
     display: none;
 }
@@ -92,9 +85,6 @@ header h1 {
     font-size: 0.9rem;
 }
 
-
-
-
 .input-wrapper {
     position: relative;
 }
@@ -105,13 +95,8 @@ input {
     border: 2px solid #e2e8f0;
     border-radius: var(--radius);
     font-size: 1rem;
-    transition: all 0.2s;
-    outline: none;
-}
 
-input:focus {
-    border-color: var(--primary);
-    box-shadow: 0 0 0 4px rgba(64, 82, 245, 0.1);
+    outline: none;
 }
 
 .btn-primary {
@@ -124,21 +109,10 @@ input:focus {
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.2s;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-}
-
-.btn-primary:hover {
-    background: var(--primary-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(64, 82, 245, 0.3);
-}
-
-.btn-primary:active {
-    transform: translateY(0);
 }
 
 .marks-grid {
@@ -195,12 +169,6 @@ input:focus {
     border-radius: var(--radius);
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.2s;
-}
-
-.btn-secondary:hover {
-    background: #f8fafc;
-    border-color: #cbd5e1;
 }
 
 /* Result Card */
@@ -209,7 +177,6 @@ input:focus {
     border-radius: 20px;
     padding: 1.5rem;
     border: 1px solid #e2e8f0;
-    animation: slideUp 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .result-header h3 {
@@ -288,40 +255,5 @@ input:focus {
     border-radius: var(--radius);
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.2s;
-}
 
-.btn-outline:hover {
-    background: var(--primary);
-    color: white;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 1.5rem;
-    }
 }
