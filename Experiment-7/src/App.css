@@ -9,6 +9,16 @@ body {
   text-align: center;
   padding: 20px;
   color: black;
+  border: 2px solid black;
+  border-radius: 12px;
+  height: 800px;
+  width: 600px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+
 }
 
 h1 {
