@@ -87,6 +87,9 @@ function App() {
         <button type="submit">Register</button>
 
       </form>
+      <br></br>
+      Name:Shivani Pal<br></br>
+      Roll.no:2503202300062
     </div>
   );
 }
