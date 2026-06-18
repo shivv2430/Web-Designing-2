@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women Safety & Emergency Portal</title>
+    <!-- Premium font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+    <!-- Animated Background Elements -->
+    <div class="background-blob blob-1"></div>
+    <div class="background-blob blob-2"></div>
+
+    <header class="glass-header">
+        <div class="logo">
+            <img src="favicon.png" alt="SafeHer Logo" class="brand-logo">
+            <span>SafeHer</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contacts">Emergency Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero fade-in">
+            <div class="hero-content">
+                <div class="badge">Stay Safe. Stay Connected.</div>
+                <h1>Your Safety is Our <span class="highlight">Priority</span></h1>
+                <p>A dedicated, fast, and reliable portal for women's safety, immediate emergency assistance, and
+                    essential resources.</p>
+                <div class="action-group">
+                    <button id="sos-btn" class="sos-button glow-effect">
+                        <i class="fas fa-fingerprint"></i> TAP FOR SOS
+                    </button>
+                    <p id="sos-status" class="status-message"></p>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="shield-container">
+                    <div class="ring ring-1"></div>
+                    <div class="ring ring-2"></div>
+                    <div class="ring ring-3"></div>
+                    <div class="shield-core">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features-section fade-in">
+            <div class="section-header">
+                <h2>Portal Features</h2>
+                <p>Tools designed to protect and empower you</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card glass-card">
+                    <div class="icon-wrapper bg-blue">
+                        <i class="fas fa-location-crosshairs"></i>
+                    </div>
+                    <h3>Live Location</h3>
+                    <p>Share your real-time coordinates securely with your trusted circle and local authorities with
+                        zero delay.</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="icon-wrapper bg-red">
+                        <i class="fas fa-phone-volume"></i>
+                    </div>
+                    <h3>One-Tap Call</h3>
+                    <p>Direct, immediate access to national emergency hotlines so you can seek help without searching
+                        for numbers.</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="icon-wrapper bg-purple">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <h3>Safety Guidelines</h3>
+                    <p>Access curated, actionable tips on personal safety, self-defense, and situational awareness.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacts" class="contacts-section fade-in">
+            <div class="section-header">
+                <h2>Emergency Contacts</h2>
+                <p>National helplines available 24/7</p>
+            </div>
+            <div class="contact-list">
+                <div class="contact-item glass-card">
+                    <div class="contact-icon"><i class="fas fa-user-shield"></i></div>
+                    <div class="contact-info">
+                        <span class="contact-name">Women Helpline</span>
+                        <span class="contact-desc">All India network for women in distress</span>
+                    </div>
+                    <a href="tel:1091" class="contact-action btn-outline">Call 1091</a>
+                </div>
+                <div class="contact-item glass-card">
+                    <div class="contact-icon"><i class="fa-solid fa-hand" style="color: rgb(91, 66, 243);"></i></i>
+                    </div>
+                    <div class="contact-info">
+                        <span class="contact-name">Police Control</span>
+                        <span class="contact-desc">Immediate dispatch and assistance</span>
+                    </div>
+                    <a href="tel:112" class="contact-action btn-outline">Call 112</a>
+                </div>
+                <div class="contact-item glass-card">
+                    <div class="contact-icon"><i class="fas fa-house-chimney-crack"></i></div>
+                    <div class="contact-info">
+                        <span class="contact-name">Domestic Abuse</span>
+                        <span class="contact-desc">Support, counseling, and rescue</span>
+                    </div>
+                    <a href="tel:181" class="contact-action btn-outline">Call 181</a>
+                </div>
+                <div class="contact-item glass-card">
+                    <div class="contact-icon"><i class="fas fa-truck-medical"></i></div>
+                    <div class="contact-info">
+                        <span class="contact-name">Ambulance</span>
+                        <span class="contact-desc">Emergency medical services</span>
+                    </div>
+                    <a href="tel:102" class="contact-action btn-outline">Call 102</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass-footer">
+        <p>&copy; 2026 SafeHer - Women Safety Portal.</p>
+        <p><small>Web Design Assignment - UI/UX Enhanced</small></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
