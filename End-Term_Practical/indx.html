@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel or Consonant Checker</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Vowel & Consonant Checker</h1>
+        <p class="subtitle">Enter a single character to check its type</p>
+        
+        <div class="input-group">
+            <input type="text" id="charInput" maxlength="1" placeholder="Type a letter..." autocomplete="off">
+            <button onclick="checkCharacter()">Check</button>
+        </div>
+
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        function checkCharacter() {
+            const input = document.getElementById('charInput').value;
+            const resultDiv = document.getElementById('result');
+            
+            // Clear previous animation class if any
+            resultDiv.className = 'result';
+            
+            // Trigger reflow to restart animation
+            void resultDiv.offsetWidth;
+            
+            if (input.length === 0) {
+                resultDiv.textContent = "Please enter a character.";
+                resultDiv.classList.add('error', 'show');
+                return;
+            }
+
+            const char = input.toLowerCase();
+            const isLetter = /^[a-z]$/.test(char);
+
+            if (!isLetter) {
+                resultDiv.textContent = "Please enter a valid alphabet letter.";
+                resultDiv.classList.add('error', 'show');
+                return;
+            }
+
+            // Using if-else condition as requested
+            if (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u') {
+                resultDiv.innerHTML = `The letter <strong>${input}</strong> is a Vowel! ✨`;
+                resultDiv.classList.add('success', 'show');
+            } else {
+                resultDiv.innerHTML = `The letter <strong>${input}</strong> is a Consonant! 📚`;
+                resultDiv.classList.add('success', 'show');
+            }
+        }
+
+        // Add event listener for Enter key
+        document.getElementById('charInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                checkCharacter();
+            }
+        });
+    </script>
+</body>
+</html>
